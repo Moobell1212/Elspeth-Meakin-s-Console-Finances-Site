@@ -87,7 +87,28 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-var totalmonths = finances.length;
 console.log("Financial Analysis");
 console.log("----------------------------");
+
+var totalmonths = finances.length;
 console.log("Total Months: " + totalmonths);
+
+let sumArray = [];
+
+// var sumArray = finances.forEach(array => array.splice(0,1));
+
+for (let i=0; i<finances.length; i++){
+    /* use this to check that correct info is being used console.log(finances[i][1]); */
+    sumArray.push(finances[i][1])
+}
+
+/* Use below to check that sumArray is correct 
+console.log(sumArray) */
+
+let sum = 0;
+
+for (let i = 0; i < sumArray.length; i++) {
+     sum += sumArray[i];
+}
+
+console.log("Total: $" + sum)
