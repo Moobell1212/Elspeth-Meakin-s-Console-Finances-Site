@@ -143,12 +143,23 @@ console.log("Average Change: $" + finalAverage)
 //     console.log(final)
 // }
 
-var greatestDiff = 0
+var greatestInc = 0
 for (let i=0; i<=financeDiff.length-2; i++){
-    if (financeDiff[i]>greatestDiff) {
-    greatestDiff = financeDiff[i];
+    if (financeDiff[i]>greatestInc) {
+    greatestInc = financeDiff[i];
     } 
-
+    
 }
 
-console.log("Greatest Increase in Profits: "  + "($" + greatestDiff + ")")
+// GREATEST DECREASE
+console.log("Greatest Increase in Profits: " + "($" + greatestInc + ")")
+
+var greatestDec = 0
+for (let i=0; i<=financeDiff.length-2; i++){
+    if (financeDiff[i]<greatestDec) {
+    greatestDec = financeDiff[i];
+    } 
+    
+}
+
+console.log("Greatest Increase in Profits: " + "($" + greatestDec + ")")
