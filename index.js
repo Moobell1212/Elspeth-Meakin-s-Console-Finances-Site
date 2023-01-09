@@ -151,8 +151,9 @@ for (let i=0; i<=financeDiff.length-2; i++){
     
 }
 
-// GREATEST DECREASE
 console.log("Greatest Increase in Profits: " + "($" + greatestInc + ")")
+
+// GREATEST DECREASE
 
 var greatestDec = 0
 for (let i=0; i<=financeDiff.length-2; i++){
@@ -162,4 +163,4 @@ for (let i=0; i<=financeDiff.length-2; i++){
     
 }
 
-console.log("Greatest Increase in Profits: " + "($" + greatestDec + ")")
+console.log("Greatest Decrease in Profits: " + "($" + greatestDec + ")")
