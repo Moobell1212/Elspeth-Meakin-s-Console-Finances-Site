@@ -90,8 +90,12 @@ var finances = [
 console.log("Financial Analysis");
 console.log("----------------------------");
 
+// TOTAL MONTHS
+
 var totalmonths = finances.length;
 console.log("Total Months: " + totalmonths);
+
+//  TOTAL
 
 let sumArray = [];
 
@@ -102,7 +106,7 @@ for (let i=0; i<finances.length; i++){
     sumArray.push(finances[i][1])
 }
 
-/* Use below to check that sumArray is correct 
+/*Use below to check that sumArray is correct 
 console.log(sumArray) */
 
 let sum = 0;
@@ -111,4 +115,28 @@ for (let i = 0; i < sumArray.length; i++) {
      sum += sumArray[i];
 }
 
-console.log("Total: $" + sum)
+console.log("Total: $" + sum);
+
+// AVERAGE CHANGE
+
+let financeDiff= [];
+
+for (let i=1; i<=sumArray.length; i++){
+    var diff = sumArray[i]-sumArray[i-1]
+    financeDiff.push(diff)
+}
+
+/* console.log(financeDiff) */
+
+let diffTotal = 0;
+
+for (let i=0; i<financeDiff.length-1; i++){
+    diffTotal += financeDiff[i];
+}
+
+/* console.log(diffTotal) */
+
+var average = diffTotal/85;
+var finalAverage = average.toFixed(2) 
+
+console.log("Average Change: $" + finalAverage)
