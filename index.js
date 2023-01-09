@@ -99,15 +99,9 @@ console.log("Total Months: " + totalmonths);
 
 let sumArray = [];
 
-// var sumArray = finances.forEach(array => array.splice(0,1));
-
 for (let i=0; i<finances.length; i++){
-    /* use this to check that correct info is being used console.log(finances[i][1]); */
     sumArray.push(finances[i][1])
 }
-
-/*Use below to check that sumArray is correct 
-console.log(sumArray) */
 
 let sum = 0;
 
@@ -126,17 +120,35 @@ for (let i=1; i<=sumArray.length; i++){
     financeDiff.push(diff)
 }
 
-/* console.log(financeDiff) */
-
 let diffTotal = 0;
 
 for (let i=0; i<financeDiff.length-1; i++){
     diffTotal += financeDiff[i];
 }
 
-/* console.log(diffTotal) */
-
 var average = diffTotal/85;
 var finalAverage = average.toFixed(2) 
 
 console.log("Average Change: $" + finalAverage)
+
+// GREATEST INCREASE
+// var greatest = 0
+// var final = 0
+// for (let i=1; i<=financeDiff.length-2; i++){
+//     greatest = financeDiff[i] - financeDiff[i-1]
+//     console.log(greatest)
+//     if (greatest > final) {
+//     final = greatest
+//     } 
+//     console.log(final)
+// }
+
+var greatestDiff = 0
+for (let i=0; i<=financeDiff.length-2; i++){
+    if (financeDiff[i]>greatestDiff) {
+    greatestDiff = financeDiff[i];
+    } 
+
+}
+
+console.log("Greatest Increase in Profits: "  + "($" + greatestDiff + ")")
