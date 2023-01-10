@@ -97,11 +97,15 @@ console.log("Total Months: " + totalmonths);
 
 //  TOTAL
 
+// creating an array of just the amounts in the finances array 
+
 let sumArray = [];
 
 for (let i=0; i<finances.length; i++){
     sumArray.push(finances[i][1])
 }
+
+// summing together all of the numbers in my new sumArray
 
 let sum = 0;
 
@@ -113,6 +117,9 @@ console.log("Total: $" + sum);
 
 // AVERAGE CHANGE
 
+// creating a new array made of the differences in every number in my sumArray
+    // this will cause corresponding months to shift up once. This will need to be accounted for later
+
 let financeDiff= [];
 
 for (let i=1; i<=sumArray.length; i++){
@@ -120,11 +127,15 @@ for (let i=1; i<=sumArray.length; i++){
     financeDiff.push(diff)
 }
 
+// adding together all the differences in finances per month
+
 let diffTotal = 0;
 
 for (let i=0; i<financeDiff.length-1; i++){
     diffTotal += financeDiff[i];
 }
+
+//  dividing total over todal months -1 to find average
 
 var average = diffTotal/85;
 var finalAverage = average.toFixed(2) 
