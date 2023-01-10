@@ -147,11 +147,11 @@ var greatestInc = 0
 for (let i=0; i<=financeDiff.length-2; i++){
     if (financeDiff[i]>greatestInc) {
     greatestInc = financeDiff[i];
-    } 
-    
+    var greatestIncMonth = finances[i+1]
+    }     
 }
 
-console.log("Greatest Increase in Profits: " + "($" + greatestInc + ")")
+console.log("Greatest Increase in Profits: " + greatestIncMonth[0] + "( $" + greatestInc + ")")
 
 // GREATEST DECREASE
 
@@ -160,7 +160,6 @@ for (let i=0; i<=financeDiff.length-2; i++){
     if (financeDiff[i]<greatestDec) {
     greatestDec = financeDiff[i];
     } 
-    
 }
 
 console.log("Greatest Decrease in Profits: " + "($" + greatestDec + ")")
