@@ -18,3 +18,7 @@ The required equations will be done using loops in Javascript, and the answers w
 
 
 <img src="./images/webpage screenshot.png">
+
+## License
+
+MIT
