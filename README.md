@@ -17,7 +17,12 @@ This webpage shows the following data of a given finance array:
 The required equations will be done using loops in Javascript, and the answers will be printed to the console log as shown below.
 
 
+
 <img src="./images/webpage screenshot.png">
+
+The console can be accessed from the webpage using Option + ⌘ + J on macOS, or Shift + CTRL + J on Windows and Linux.
+
+Deployed site: https://moobell1212.github.io/Elspeth-Meakin-s-Console-Finances-Site/
 
 ## License
 
