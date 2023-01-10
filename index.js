@@ -131,18 +131,6 @@ var finalAverage = average.toFixed(2)
 
 console.log("Average Change: $" + finalAverage)
 
-// GREATEST INCREASE
-// var greatest = 0
-// var final = 0
-// for (let i=1; i<=financeDiff.length-2; i++){
-//     greatest = financeDiff[i] - financeDiff[i-1]
-//     console.log(greatest)
-//     if (greatest > final) {
-//     final = greatest
-//     } 
-//     console.log(final)
-// }
-
 var greatestInc = 0
 for (let i=0; i<=financeDiff.length-2; i++){
     if (financeDiff[i]>greatestInc) {
@@ -151,7 +139,7 @@ for (let i=0; i<=financeDiff.length-2; i++){
     }     
 }
 
-console.log("Greatest Increase in Profits: " + greatestIncMonth[0] + "( $" + greatestInc + ")")
+console.log("Greatest Increase in Profits: " + greatestIncMonth[0] + " ($" + greatestInc + ")")
 
 // GREATEST DECREASE
 
@@ -159,7 +147,8 @@ var greatestDec = 0
 for (let i=0; i<=financeDiff.length-2; i++){
     if (financeDiff[i]<greatestDec) {
     greatestDec = financeDiff[i];
+    var greatestDecMonth = finances[i+1]
     } 
 }
 
-console.log("Greatest Decrease in Profits: " + "($" + greatestDec + ")")
+console.log("Greatest Decrease in Profits: " + greatestDecMonth[0] + " ($" + greatestDec + ")")
