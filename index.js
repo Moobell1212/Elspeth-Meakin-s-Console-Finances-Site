@@ -131,6 +131,8 @@ var finalAverage = average.toFixed(2)
 
 console.log("Average Change: $" + finalAverage)
 
+// GREATEST INCREASE
+
 var greatestInc = 0
 for (let i=0; i<=financeDiff.length-2; i++){
     if (financeDiff[i]>greatestInc) {
